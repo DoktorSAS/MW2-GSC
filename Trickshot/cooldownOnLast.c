@@ -1,10 +1,10 @@
-scoreMonitor(){ // Function To check score /*Made by DoktorSAS*/
+sscoreMonitor(){ // Function to check score /*Made by DoktorSAS*/
 	self endon( "disconnect" );
 	self endon( "scoreEnd" );
 	level endon( "game_ended" );
 	for(;;){	
 		if(self.pers["score"] >= 450){ //Score in points
-			self thread culdown();
+			self thread cooldown();
 			self thread unfreeze();
 			wait 0.01;
 			self notify( "scoreEnd" );
@@ -12,20 +12,20 @@ scoreMonitor(){ // Function To check score /*Made by DoktorSAS*/
 		wait 0.25;
 	}
 }
-culdown(){ //Culdown Function - 5 sec /*Made by DoktorSAS*/
+cooldown(){ //cooldown Function - 5 sec /*Made by DoktorSAS*/
 	self endon("unfreezed");
 	timer = 5;
-	self.culdown = self createFontString("default", 2);
-	self.culdown setPoint("CENTER", "CENTER", 0, 90);
+	self.cooldown = self createFontString("default", 2);
+	self.cooldown setPoint("CENTER", "CENTER", 0, -90);
 	self freezeControls(true);
 	self setBlurForPlayer( 4, 0.2 );
 	while(true){
 		timer = timer - 1;
-		self.culdown setText("Trickshot ^7Time in^1 "+ timer +"\n^7Press ^2[{+melee}] ^7to ^5unfreeze");
+		self.cooldown setText("Trickshot ^7Time in^1 "+ timer +"\n^7Press ^2[{+melee}] ^7to ^5unfreeze");
 		wait 1;
 		if(timer == 0){
 			self freezeControls(false);
-			self.culdown setText("");
+			self.cooldown setText("");
 			self setBlurForPlayer( 0, 0.2 );
 			onLast();
 			self notify("unfreezed");
@@ -35,7 +35,7 @@ culdown(){ //Culdown Function - 5 sec /*Made by DoktorSAS*/
 unfreeze(){ //Unfreeze without waiting timer /*Made by DoktorSAS*/
 	self endon("unfreezed");
 	self waittill("knife");
-	self.culdown setText("");
+	self.cooldown setText("");
 	self setBlurForPlayer( 0, 0.2 );
 	self freezeControls(false);
 	wait 0.25;
