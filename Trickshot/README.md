@@ -7,3 +7,7 @@ Developed by **DoktorSAS**
 3. You are read
 # Damage Menager
 *Is an exemple/simple code of a to mange damage*
+# Spawn Bots
+*How to spawn bots?*
+1. Put code inside your mod
+2. Call *initTestClients( numberOfBots )* to spawn bots
