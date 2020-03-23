@@ -1,2 +1,9 @@
 # MW2-GSC
-Modern Warfare 2 GSC Codes
+Developer: DoktorSAS
+Welcome to MW2 GSC Code Area
+**In there u can finde a lot of cool code for your server:**
+ - FFA Fast Last
+ - Only Sniper Damage
+ - Work in progress
+ 
+ Website -> https://sorexproject.webflow.io/
