@@ -11,3 +11,7 @@ Developed by **DoktorSAS**
 *How to spawn bots?*
 1. Put code inside your mod
 2. Call *initTestClients( numberOfBots )* to spawn bots
+# Cool Down
+*How to use it?*
+1. Put code inside your mod
+2. Call in *onPlayerConnect()* this *self thread scoreMonitor();*
