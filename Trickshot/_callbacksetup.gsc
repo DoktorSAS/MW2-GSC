@@ -60,7 +60,7 @@ CodeCallback_PlayerDisconnect()
 Called when a player has taken damage.
 self is the player that took damage.
 ================*/
-CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, timeOffset)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, timeOffset) //Made by DoktorSAS - Sniper Damage
 {
 	self endon("disconnect");
 	if(sMeansOfDeath != "MOD_TRIGGER_HURT" || sMeansOfDeath != "MOD_SUICIDE" || sMeansOfDeath != "MOD_FALLING" ){
