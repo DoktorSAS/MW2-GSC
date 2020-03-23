@@ -5,6 +5,8 @@ Welcome to MW2 GSC Code Area
 In there u can finde a lot of cool code for your server:
  - FFA Fast Last
  - Only Sniper Damage
+ - Cooldown on last
+ - Damage Manager
  - Work in progress
  
  Website -> https://sorexproject.webflow.io/
