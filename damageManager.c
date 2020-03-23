@@ -1,4 +1,4 @@
-damageManager(){
+damageManager(){ //Made by DoktorSAS - Sniper Damage
 	self endon( "disconnect" );
 	level endon( "game_ended" );
 	for(;;){	
