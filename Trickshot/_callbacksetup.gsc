@@ -60,13 +60,14 @@ CodeCallback_PlayerDisconnect()
 Called when a player has taken damage.
 self is the player that took damage.
 ================*/
-CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, timeOffset) //Made by DoktorSAS - Sniper Damage
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc, timeOffset)
 {
 	self endon("disconnect");
+	distance = int(Distance(eAttacker.origin, self.origin)/50);
 	if(sMeansOfDeath != "MOD_TRIGGER_HURT" || sMeansOfDeath != "MOD_SUICIDE" || sMeansOfDeath != "MOD_FALLING" ){
 	if ( isSubStr(sWeapon, "cheytac") || isSubStr(sWeapon, "barrett") || isSubStr(sWeapon, "wa2000") || isSubStr(sWeapon, "fal") || isSubStr(sWeapon, "m21") || isSubStr(sWeapon, "m40a3") || isSubStr(sWeapon, "remington700") || isSubStr(sWeapon, "dragunov") || isSubStr(sWeapon, "mk14") || isSubStr(sWeapon, "l96a1") || isSubStr(sWeapon, "dsr") || isSubStr(sWeapon, "ballista") || isSubStr(sWeapon, "fall") || isSubStr(sWeapon, "mosin") || isSubStr(sWeapon, "msr") || isSubStr(sWeapon, "svu") || isSubStr(sWeapon, "xpr" )){
 		if(distance >= 10 && eAttacker.pers["score"] >= 1450){
-				self printToAll("<<^5Sorex^7>> ^5" + getPlayerName(eAttacker) + "^7 hit ^5" + getPlayerName(self) + "^7 from ^5" + distance + "^3m");
+				self printToAll("<<^5Sorex^7>> ^5" + eAttacker.name + "^7 hit ^5" + self.name + "^7 from ^5" + distance + "^3m");
 				iDamage = 9999;
 			}else if(eAttacker.pers["score"] < 1450 && self.pers["score"] < 1450){
 				iDamage = 9999;
