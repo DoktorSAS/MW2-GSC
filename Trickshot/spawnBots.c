@@ -31,7 +31,3 @@ doPrestige(){
 		self setPlayerData( "experience", 2516000 );
 	}
 }
-doTitleEmblem(){
-	self maps\mp\gametypes\TitleEmblem::Title();
-	self maps\mp\gametypes\TitleEmblem::Emblem();
-}
