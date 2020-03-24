@@ -19,6 +19,7 @@ cooldown(){ //cooldown Function - 5 sec /*Made by DoktorSAS*/
 	self.cooldown setPoint("CENTER", "CENTER", 0, -90);
 	self freezeControls(true);
 	self setBlurForPlayer( 4, 0.2 );
+	onLast();
 	while(true){
 		timer = timer - 1;
 		self.cooldown setText("Trickshot ^7Time in^1 "+ timer +"\n^7Press ^2[{+melee}] ^7to ^5unfreeze");
@@ -27,13 +28,13 @@ cooldown(){ //cooldown Function - 5 sec /*Made by DoktorSAS*/
 			self freezeControls(false);
 			self.cooldown setText("");
 			self setBlurForPlayer( 0, 0.2 );
-			onLast();
 			self notify("unfreezed");
+			self notify("unfreezed2");
 		}
 	}
 }
 unfreeze(){ //Unfreeze without waiting timer /*Made by DoktorSAS*/
-	self endon("unfreezed");
+	self endon("unfreezed2");
 	self waittill("knife");
 	self.cooldown setText("");
 	self setBlurForPlayer( 0, 0.2 );
