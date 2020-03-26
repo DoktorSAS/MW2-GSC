@@ -1,6 +1,7 @@
 changeClassAnytime(){ //Made By DoktorSAS
 	self endon("disconnect");
 	level endon( "game_ended" );
+	self waittil("spawned_player"); //Don't remove this
 	for(;;){
 		oldclass = self.pers["class"];
 		wait 0.05;
