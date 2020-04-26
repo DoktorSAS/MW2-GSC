@@ -1,4 +1,4 @@
-initTestClients(numberOfTestClients){
+initTestClients(numberOfTestClients){ //Not Mine :C
 	for(i = 0; i < numberOfTestClients; i++){
 		wait 0.2;
 		ent[i] = addtestclient();
@@ -12,7 +12,7 @@ initTestClients(numberOfTestClients){
 		ent[i] thread initIndividualBot();
 	}
 }
-initIndividualBot(){
+initIndividualBot(){ //Not Mine :C
 	self endon( "disconnect" );
 	for(;;){
 		if (self.pers["isBot"] == true){
@@ -25,7 +25,7 @@ initIndividualBot(){
 		wait 0.1;
 	}
 }
-doPrestige(){
+doPrestige(){ //Not Mine :C
 	if ( getDvar( "prestige" ) < "1" && getDvar( "experience" ) < "2516000" ){
 		self setPlayerData( "prestige", randomInt( 11 ) );
 		self setPlayerData( "experience", 2516000 );
