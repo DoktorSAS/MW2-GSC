@@ -19,6 +19,7 @@ Developed by **DoktorSAS**
 1. Put code inside your mod
 2. Call in *onPlayerConnect()* this *self thread changeClassAnytime();*
 
+ # License
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
