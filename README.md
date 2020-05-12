@@ -12,6 +12,8 @@ In there u can finde a lot of cool code for your server:
  - Work in progress
  
  Website -> https://sorexproject.webflow.io/
+ 
+ # License
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
