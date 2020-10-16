@@ -7,7 +7,7 @@ changeClassAnytime(){ //Made By DoktorSAS
 		wait 0.05;
 		if(self.pers["class"] != oldclass){
 			self maps\mp\gametypes\_class::giveloadout(self.pers["team"],self.pers["class"]);
-			qoldclass = self.pers["class"];
+			oldclass = self.pers["class"];
 		}
 	}
 }
